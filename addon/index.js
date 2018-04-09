@@ -123,6 +123,11 @@ export default Mixin.create({
     }
 
     Object.keys(rels).forEach(rel => {
+
+      if (!rels[rel] || !rels[rel].data) {
+        return;
+      }
+
       let relationshipData = rels[rel].data;
       if (relationshipData)
       {
